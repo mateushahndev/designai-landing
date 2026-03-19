@@ -53,7 +53,7 @@ A página simula o produto **DesignAI**, apresentando seções de hero, carrosse
    git clone https://github.com/seu-usuario/designai-landing.git
    ```
 
-2. Acesse a pasta do projeto:
+2. Accesse a pasta do projeto:
    ```bash
    cd designai-landing
    ```
