@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #111315;
+    color: #eef1f2;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h2, h3, h4, span {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/******************HEADER*********************/
+
+header {
+    margin-inline: 8rem;
+    margin-bottom: 5rem;
+    background-color: #26282a;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+}
+
+h1, h1 span {
+    font-size: 4.6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-bottom: 1.3rem;
+}
+
+h1 span {
+    color: #A775D3;
+}
+
+header .txt {
+    padding-right: 20rem;
+}
+
+header .txt p {
+    font-size: 1.1rem;
+    padding-bottom: 1.3rem;
+}
+
+header .btn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem
+}
+
+header .btn .btn1 {
+    background-color: #8E5DEC;
+    padding: .8rem 2.4rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+header .img img {
+    position: relative;
+    right: 60%;
+    width: 150%;
+}
+
+/*******************SECTION LOGOTIPOS****************/
+
+.logos-carrossel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.logos-mask {
+    position: relative;
+    overflow: hidden;
+}
+
+.logos-mask::before,
+.logos-mask::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logos-mask::before {
+    left: 0;
+    background: linear-gradient(to right, 
+        #111315 0%,
+        #11131500 100% 
+    );
+}
+
+.logos-mask::after {
+    right: 0;
+    background: linear-gradient(to left, 
+        #111315 0%,
+        #11131500 100%
+    );
+}
+
+.logotipos-container {
+    display: flex;
+    width: max-content;
+    animation: slide 15s linear infinite;
+}
+
+.logotipos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    padding-right: 7rem;
+    flex-shrink: 0;
+}
+
+.logotipos img {
+    width: 200px;
+    height: auto;
+    flex: 0 0 auto;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.logos-carrossel:hover .logotipos-container {
+    animation-play-state: paused;
+}
+
+/********************SECTION step********************/
+
+.step {
+    padding-inline: 10rem;
+    padding-top: 10rem;
+}
+
+.step-desc {
+    width: 60%;
+}
+
+.step h2 span {
+    color: #A775D3;
+}
+
+.step p {
+    font-size: 1.1rem;
+}
+
+.step .p2 {
+    padding-bottom: 2rem;
+}
+
+.step .step-container {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.step .step-container p {
+    font-size: 1rem;
+}
+
+.step .step1, .step .step2, .step .step3 {
+    background-color: #26282a;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.step .icon {
+    padding-bottom: 2.5rem;
+}
+
+.step .icon i {
+    background-color: #8D5AE5;
+    padding: 15px;
+    border-radius: 50%
+}
+
+.step h3 {
+    font-size: 2rem;
+    padding-bottom: .2rem;
+}
+
+
+/********************SECTION planS********************/
+
+.plans {
+    padding-inline: 10rem;
+    padding-top: 10rem;
+}
+
+.plans h2 span {
+    color: #A775D3;
+}
+
+.plans .plans-desc {
+    padding-bottom: 2rem;
+    width: 60%;
+}
+
+.plans-container {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.plans-container .plan {
+    background-color: #26282a;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan hr {
+    border-color: #eef1f23d;
+}
+
+.price {
+    padding-bottom: 1rem;
+}
+
+.plan .price p {
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+}
+
+.price h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.price small {
+    font-weight: 700;
+}
+
+.plan .features {
+    padding-top: 1rem;
+}
+
+.plan .features ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.plan .features ul i {
+    color: #eef1f28f;
+    padding-right: 7px;
+}
+
+.plan .plan-container {
+    padding-bottom: 6rem;
+}
+
+.plan .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan .btn a {
+    width: 100%;
+    border: 1px solid #a775d383;
+    border-radius: 10px;
+    padding-block: .7rem;
+    color: #A775D3;
+    font-weight: 600;
+    text-align: center;
+}
+
+.plans-container .best-plan {
+    background-color: #8F5CEA;
+}
+
+.best-plan hr {
+    border-color: #eef1f285;
+}
+
+.best-plan .features ul i {
+    color: #eef1f2af;
+}
+
+.best-plan .btn a {
+    border: none;
+    background-color: #161214;
+    color: #eef1f2;
+}
+
+/****************SECTION INSIGHT****************/
+
+.insights {
+    padding-top: 10rem;
+    padding-inline: 10rem;
+}
+
+.insights .insights-desc {
+    width: 60%;
+}
+
+.insights h2 span {
+    color: #A775D3;
+}
+
+.insights .insights-desc p {
+    padding-bottom: 2rem;
+}
+
+.insights .insights-container {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.insights .insight-example {
+    background-color: #26282a;
+    border-radius: 15px;
+}
+
+.insights .insight-example img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.insight-desc {
+    padding: .7rem 1rem;
+}
+
+.insight-desc .desc-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.desc-info p {
+    font-weight: 700;
+    color: #ffffffab;
+}
+
+.insights .desc-title h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: .7rem;
+}
+
+.insights .insights-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.insights .insights-cta a {
+    background-color: #8F5CEA;
+    padding: .7rem 3.3rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/*********************SECTION CTA**********************/
+
+.cta {
+    margin-inline: 8rem;
+    margin-block: 10rem 10rem;
+    background-color: #26282a;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta h2 span {
+    color: #A775D3;
+}
+
+.cta .cta-txt {
+    padding-inline: 3rem;
+    padding-block: 5rem;
+    width: 50%;
+}
+
+.cta .cta-txt h2 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    padding-bottom: 1rem;
+}
+
+.cta .cta-txt p {
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+}
+
+.cta .cta-txt a {
+    padding: .7rem 3rem;
+    font-weight: 600;
+    background-color: #8F5CEA;
+    border-radius: 10px;
+}
+
+.cta .cta-img img {
+    position: relative;
+    right: 40px;
+}
+
+/******************FOOTER******************/
+
+footer {
+    background-color: #26282a;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+/*****************MEDIA QUERIES**********/
+
+@media (max-width: 1565px) {
+    
+    header, .cta {
+        margin-inline: 5rem;
+    }
+
+    h1, h1 span  {
+        font-size: 4rem;
+    }
+
+    .step, .plans, .insights {
+        padding-inline: 7rem;
+    }
+    
+}
+
+@media (max-width: 1350px) {
+
+    h1, h1 span  {
+        font-size: 3.6rem;
+    }
+
+    header .txt p {
+        font-size: 1rem;
+    }
+
+    header .txt {
+        padding-right: 12rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    .cta .cta-txt h2, .cta h2 span {
+        font-size: 3rem;
+    }
+
+    .cta .cta-txt p {
+        font-size: 1rem;
+    }
+
+    .cta .cta-img img {
+        width: 80%;
+        right: 0;
+    }
+}
+
+@media (max-width: 1170px) {
+    
+    h1, h1 span  {
+        font-size: 3.2rem;
+    }
+
+    header .txt {
+        padding-right: 10rem;
+    }
+
+    .logotipos img {
+        width: 150px;
+    }
+
+    .step, .plans, .insights {
+        padding-top: 8rem;
+        padding-inline: 5rem;
+    }
+
+    .step h2, .step h2 span, .plans h2, .plans h2 span, .insights h2, .insights h2 span {
+        font-size: 2.6rem;
+    }
+
+    .step .step-desc p, .plans .plans-desc p, .insights .insights-desc p {
+        font-size: 1rem;
+    }
+
+    .step-desc, .plans .plans-desc, .insights .insights-desc {
+        width: 100%;
+    }
+
+    .insights .insights-container {
+        grid-template-rows: 2;
+        grid-template-columns: .5fr .5fr;
+    }
+
+    .cta {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cta .cta-txt {
+        width: 100%;
+        padding-block: 3rem;
+    }
+
+    .cta .cta-txt h2 {
+        padding-bottom: 1.1rem;
+    }
+}
+
+@media (max-width: 1085px) {
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    header .txt {
+        padding-right: 0;
+    }
+
+    h1, h1 span, header .txt p {
+        padding-bottom: 1.9rem;
+    }
+
+    header .btn {
+        justify-content: center;
+    }
+
+    header .img img {
+        position: static;
+        width: 80%;
+    }
+
+    header .img {
+        padding-block: 1rem;
+    }
+
+    .logotipos {
+        gap: 5rem;
+        padding-right: 5rem;
+    }
+    
+    .step .step-container {
+        grid-template-rows: 3;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .step .step1, .step .step2, .step .step3 {
+        display: flex;
+        align-items: center;
+    }
+
+    .step .icon {
+        padding-bottom: 0;
+        padding-right: 1.4rem;
+    }
+
+    .plans-container {
+        grid-template-rows: 2;
+        grid-template-columns: .5fr .5fr;
+    }
+}
+
+@media (max-width: 850px) {
+    
+    .insights .insights-container {
+        grid-template-rows: 1;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 740px) {
+
+    header {
+        margin-inline: 2rem;
+        padding-inline: 2rem;
+    }
+    
+    h1, h1 span {
+        font-size: 3rem;
+    }
+
+    header .img img {
+        width: 100%;
+    }
+
+    .logotipos {
+        gap: 4rem;
+        padding-right: 4rem;
+    }
+
+    .logotipos img {
+        width: 125px;
+    }
+
+    .step .step1, .step .step2, .step .step3 {
+        display: block;
+    }
+
+    .step .icon {
+        padding-bottom: 2.5rem;
+        padding-right: 0;
+    }
+
+    .plans-container {
+        grid-template-rows: 1;
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        margin-inline: 2rem;
+    }
+
+    .cta .cta-txt h2, .cta h2 span {
+        font-size: 2.5rem;
+    }
+
+    .cta .cta-txt p {
+        font-size: .9rem;
+    }
+
+}
+
+@media (max-width: 680px) {
+    
+    .cta .cta-txt h2, .cta h2 span {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    
+    header {
+        margin-inline: 1rem;
+    }
+
+    h1, h1 span {
+        font-size: 2.5rem;
+    }
+
+    header .txt p {
+        font-size: .9rem;
+    }
+
+    .step {
+        padding-inline: 2rem;
+    }
+
+    .step h2, .step h2 span, .plans h2, .plans h2 span, .insights h2, .insights h2 span {
+        font-size: 2.2rem;
+    }
+
+    .plans {
+        padding-inline: 2rem;
+    }
+
+    .insights {
+        padding-inline: 2rem;
+    }
+
+    .cta {
+        margin-inline: 1rem;
+    }
+}
+
+@media (max-width: 525px) {
+    
+    footer p {
+        font-size: .8rem;
+    }
+}
