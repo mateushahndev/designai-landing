@@ -2,6 +2,8 @@
 
 Landing page fictícia de um assistente de design com inteligência artificial, desenvolvida como projeto de estudo e portfólio. O projeto explora boas práticas de front-end estático, SEO técnico e design responsivo.
 
+Link do Site: https://designai-henna.vercel.app/
+
 ## Visão Geral
 
 A página simula o produto **DesignAI**, apresentando seções de hero, carrossel de logos de parceiros, fluxo de uso em etapas, planos de preço, blog de insights e call-to-action final.
